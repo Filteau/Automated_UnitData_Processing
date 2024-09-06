@@ -1,0 +1,38 @@
+Python File Handling Notes
+
+os.rename('old_file_name', 'new_file_name')
+os.remove('file_path')
+
+shutil.copy('src_file_path', 'new_path')
+shutil.move('src_file_path', 'new_path')
+
+os.listdir('dir_path') # Get all files
+shutil.rmtree('path') # Remove directory
+shutil.copytree('src_path', 'dst_path') # Copy dir_path
+
+
+
+Python Script Running
+import subprocess
+import os
+
+# Specify the path to the .bat file
+bat_file_path = r'C:\path\to\your\script.bat'
+
+# Run the .bat file
+subprocess.run([bat_file_path], shell=True)
+
+# Specify the path to the Python script
+python_script_path = r'C:\path\to\your\main.py'
+
+# Run the Python script
+subprocess.run(['python', python_script_path], shell=True)
+
+If you need to specify arguments to the .py file
+ you can append them in the subprocess.run() list, like this: 
+ ['python', python_script_path, 'arg1', 'arg2'].
+
+
+# Tie the subprocess to a var to FORCE STOP 
+ python_process = subprocess.Popen(['python', python_script_path], shell=True)
+ python_process.terminate() 

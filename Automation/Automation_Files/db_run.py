@@ -3,10 +3,11 @@ import os
 
 def run_db_recovery():
     # Path to the DBRecovery.bat file
-    dbr_path = r"c:/Users/Reece Filteau/Desktop/Automation/Data_Processing_Script/DBRecovery.bat"
-    sql_path = r"c:/Users/Reece Filteau/Desktop/Automation/Data_Processing_Script/sqlite3.exe"
-    
-    working_directory = r"C:/Users/Reece Filteau/Desktop/Automation/Data_Processing_Script"
+    dbr_path = r"insert/complete/path/here"
+    sql_path = r"insert/complete/path/here"
+
+    # change the below to your path to Data_Processing_Script
+    working_directory = r"Automation/Data_Processing_Script"
     
     #This uses the os.system() method which is
     # a simple way to run a command in the command prompt.
